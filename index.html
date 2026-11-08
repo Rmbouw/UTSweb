@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk | Toko Buku</title>
+    <link rel="stylesheet" href="cs/style.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Times New Roman', Times, serif; }
+        body { display: flex; height: 100vh; overflow: hidden; background: #fff; }
+        
+        /* Sisi Kiri (Hijau) */
+        .login-left {
+            flex: 1;
+            background: #193627;
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 18px; letter-spacing: 0.5px; }
+        .brand-icon { background: #fff; color: #193627; padding: 6px 10px; border-radius: 6px; }
+        
+        /* Kombinasi teks warna Kuning & Putih */
+        .left-content h4 { font-size: 13px; letter-spacing: 1.5px; color: #fbbf24; text-transform: uppercase; margin-bottom: 15px; font-weight: bold; }
+        .left-content h1 { font-size: 42px; line-height: 1.25; margin-bottom: 20px; font-weight: 700; letter-spacing: 0.5px; color: #ffffff; }
+        .left-content h1 span { color: #fbbf24; } /* Warna kuning emas */
+        .left-content p { color: #cbd5e1; font-size: 15px; line-height: 1.6; margin-bottom: 40px; font-style: italic; }
+        .left-content p span { color: #fbbf24; } /* Warna kuning emas di paragraf */
+        
+        /* Tata letak gambar buku miring langsung tanpa box luar */
+        .book-previews { 
+            display: flex; 
+            align-items: flex-end; 
+            gap: 0px; 
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+        .book-img { 
+            width: 115px; 
+            height: 155px; 
+            object-fit: cover; 
+            border-radius: 6px; 
+            border: 3px solid #ffffff; /* Border putih tipis pas di sekeliling gambar buku */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
+            display: block; 
+            background: #fff;
+        }
+
+        /* Posisi miring ala tumpukan buku */
+        .book-1 { transform: rotate(-8deg) translateY(10px); z-index: 1; }
+        .book-2 { transform: rotate(0deg) translateY(-5px); z-index: 2; margin: 0 -12px; }
+        .book-3 { transform: rotate(8deg) translateY(10px); z-index: 1; }
+
+        /* Sisi Kanan (Form) */
+        .login-right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto;
+            max-width: 550px;
+        }
+        .login-right h2 { font-size: 30px; color: #111; margin-bottom: 8px; font-weight: 700; }
+        .login-right p.sub { color: #666; font-size: 14px; margin-bottom: 25px; font-style: italic; }
+        
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-size: 13px; font-weight: bold; color: #444; margin-bottom: 6px; letter-spacing: 0.3px; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; background: #fafafa; font-family: 'Times New Roman', Times, serif; }
+        .form-group input:focus { outline: none; border-color: #193627; background: #fff; }
+        
+        .btn-submit { width: 100%; padding: 12px; background: #193627; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 15px; margin-top: 10px; letter-spacing: 0.5px; }
+        .btn-submit:hover { background: #12281c; }
+        
+        .test-accounts { margin-top: 25px; background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 12px; color: #475569; }
+        .test-accounts b { color: #1e293b; display: block; margin-bottom: 5px; }
+        .footer-link { margin-top: 20px; text-align: center; font-size: 13px; color: #666; }
+        .footer-link a { color: #193627; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <!-- Sisi Kiri -->
+    <div class="login-left">
+        <div class="brand">
+            <div class="brand-icon">📚</div>
+            <span style="color: #ffffff;">Toko <span style="color: #fbbf24;">Buku</span></span>
+        </div>
+        <div class="left-content">
+            <h4>Buku Untuk Setiap Langkah Belajar</h4>
+            <h1>Temukan buku yang pas untuk <span>ceritamu.</span></h1>
+            <p>Pilih buku yang dibutuhkan, <span>lakukan pemesanan</span>, dan <span>pantau proses pengirimannya</span> secara berkala.</p>
+            
+            <!-- 3 Gambar Buku Langsung dengan Border Putih Tipis -->
+            <div class="book-previews">
+                <img src="img/kepemimpinan.jpeg" alt="Buku 1" class="book-img book-1">
+                <img src="img/anak.jpeg" alt="Buku 2" class="book-img book-2">
+                <img src="img/keuangan.jpeg" alt="Buku 3" class="book-img book-3">
+            </div>
+        </div>
+        <div style="font-size: 11px; opacity: 0.6; letter-spacing: 0.5px; color: #cbd5e1;">&copy; 2026 Toko Buku Online</div>
+    </div>
+
+    <!-- Sisi Kanan (Form Login) -->
+    <div class="login-right">
+        <div style="font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: bold;">Selamat Datang Kembali</div>
+        <h2>Selamat datang kembali.</h2>
+        <p class="sub">Masuk menggunakan akun yang terdaftar untuk melanjutkan pemesanan buku.</p>
+
+        <form onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label>Alamat email</label>
+                <input type="text" id="loginEmail" placeholder="contoh@email.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 15px;">
+                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;"><input type="checkbox"> Gunakan akun contoh</label>
+                <a href="#" style="color: #193627; text-decoration: none; font-weight: bold;">Lupa password?</a>
+            </div>
+
+            <button type="submit" class="btn-submit">Masuk</button>
+        </form>
+
+        <div class="test-accounts">
+            <b>AKUN UNTUK PENGUJIAN</b>
+            <div>Admin: agus@gmail.com / agus123</div>
+            <div>Pengguna: rina@gmail.com / rina123</div>
+            <div>Pengguna: siti@gmail.com / siti123</div>
+        </div>
+
+        <div class="footer-link">
+            Belum punya akun? <a href="#">Daftar sekarang</a>
+        </div>
+    </div>
+    <script>
+        const dataPengguna = [
+            {
+                id: 1,
+                nama: "Rina Wulandari",
+                email: "rina@gmail.com",
+                password: "rina123",
+                role: "User"
+            },
+            {
+                id: 2,
+                nama: "Agus Saleh Rumbouw",
+                email: "agus@gmail.com",
+                password: "agus123",
+                role: "Admin"
+            },
+            {
+                id: 3,
+                nama: "Siti Marlina",
+                email: "siti@gmail.com",
+                password: "siti123",
+                role: "User"
+            }
+        ];
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('loginEmail').value.trim();
+            const passwordInput = document.getElementById('loginPassword').value.trim();
+
+            const user = dataPengguna.find(u => u.email.toLowerCase() === emailInput.toLowerCase());
+
+            if (!user) {
+                alert("Email tidak terdaftar! Silakan periksa kembali email Anda.");
+                return;
+            }
+
+            if (user.password !== passwordInput) {
+                alert("Password salah! Silakan coba lagi.");
+                return;
+            }
+
+            // Jika email dan password benar
+            const userData = { 
+                nama: user.nama, 
+                role: user.role, 
+                email: user.email 
+            };
+            
+            localStorage.setItem('currentUser', JSON.stringify(userData));
+            alert("Login berhasil! Selamat datang, " + user.nama);
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
