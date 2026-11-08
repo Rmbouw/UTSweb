@@ -21,7 +21,11 @@ Project **Toko Buku Online** adalah aplikasi web interaktif yang dikembangkan me
   * Menerapkan pembatasan hak akses (*Role-Based Access Control*), yang membedakan hak istimewa antara akun Admin dan pengguna biasa.
   * Validasi input dengan sistem peringatan dini (*alert*) jika email atau password tidak sesuai.
 
+  <b>Gambar Halaman Login</b>
+  ![alt text](asests/image.png)
+
 ### B. Halaman Beranda / Dashboard (`dashboard.html`)
+![alt text](asests/image-1.png)
 * **Fungsi:** Menjadi pusat informasi ringkasan aktivitas dan statistik operasional toko.
 * **Fitur & Logika:**
   * Navigasi sidebar terpadu untuk perpindahan antar menu.
@@ -30,6 +34,11 @@ Project **Toko Buku Online** adalah aplikasi web interaktif yang dikembangkan me
   * Tabel rekapitulasi akun dan riwayat sistem yang aktif.
 
 ### C. Halaman Katalog & Manajemen Stok (`stok.html`)
+![alt text](asests/image-2.png)
+<i>Halaman Katalog untuk admin</i>
+![alt text](asests/image-3.png)
+<i>Halaman Katalog User</i>
+
 * **Fungsi:** Menampilkan daftar koleksi buku, rekomendasi pilihan, serta pengelolaan stok.
 * **Fitur & Logika:**
   * Kotak pencarian instan untuk memfilter data buku berdasarkan nama, kode, atau kategori.
@@ -37,6 +46,9 @@ Project **Toko Buku Online** adalah aplikasi web interaktif yang dikembangkan me
   * **Kontrol Akses Dinamis:** Akun dengan hak akses Admin dapat melihat formulir tambah/edit serta tombol penyuntingan data untuk melakukan operasi CRUD (*Create, Read, Update*), sementara akun pengguna biasa hanya dapat menelusuri produk dan melakukan pemesanan.
 
 ### D. Halaman Keranjang & Pemesanan (`checkout.html`)
+![alt text](asests/image-4.png)
+
+![alt text](asests/image-5.png)
 * **Fungsi:** Mengelola daftar belanja dan proses *checkout* transaksi pemesanan buku.
 * **Fitur & Logika:**
   * Indikator badge keranjang belanja secara *real-time* di sidebar.
@@ -52,12 +64,19 @@ Project **Toko Buku Online** adalah aplikasi web interaktif yang dikembangkan me
   * Menampilkan informasi Nomor DO, nama pemesan, rincian buku, ekspedisi, total harga, serta status pengiriman interaktif.
 
 ### F. Halaman Laporan Pemesanan (`laporan.html`)
+<i>Gambar Riwayat Pemesanan</i>
+
+![alt text](asests/image-6.png)
+
+<i>Gambar Laporan Pemesanan</i>
+![alt text](asests/image-7.png)
 * **Fungsi:** Menyajikan rekapitulasi data keuangan dan penjualan secara menyeluruh.
 * **Fitur & Logika:**
   * Tabel rekapitulasi transaksi yang mencakup tanggal, nomor DO, identitas pemesan, rincian buku, total nominal, dan status keterangan pelunasan.
   * Sinkronisasi data otomatis setiap kali transaksi baru diselesaikan.
 
 ### G. Halaman Lacak Pengiriman (`tracking.html`)
+![alt text](asests/image-8.png)
 * **Fungsi:** Memantau status logistik pengiriman paket berdasarkan nomor *Delivery Order* (DO).
 * **Fitur & Logika:**
   * Input pencarian nomor DO (mendukung nomor bawaan modul maupun nomor DO unik hasil transaksi baru).
